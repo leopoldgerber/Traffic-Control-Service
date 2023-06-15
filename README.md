@@ -9,5 +9,5 @@ The repository contains scripts for working with the platform. A complex task is
 Responsible for loading data from the collected reports into the database. Includes connection to the database, processing of column names and types (for proper loading into the database).
 
 Required external files: 
-- database_config.json - to connect to the desired database.
-- exception_list.json - for exception columns, because not all columns with string values must be processed. Manual input is possible if there is no file.
+- <code>database_config.json</code> - to connect to the desired database.
+- <code>exception_list.json</code> - for exception columns, because not all columns with string values must be processed. Manual input is possible if there is no file.
