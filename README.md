@@ -32,27 +32,21 @@ NOTE: The best solution is to use scripts 1 and 2 in tandem in one run, since th
 <details close>
 <summary>Read more about domains by category</summary>
 <br>
- ---
+ 
+***
+ 
 Since downloadable reports, in most cases, do not have a domain in the name, it is necessary to consider the result of the download. In addition to the division by month (1 month - 1 report), there are also subcategories that form 1 category (1 subcategory - 1 report).
-  
-There are three results of downloads: 
-1 - the report was successfully downloaded and contains all the data.
-2 - the report was downloaded, but does not contain data (no data from the platform side).
-3 - the report cannot be downloaded, because the platform has not updated the data for you
----
-</details> 
 
 <br>
 
+There are three results of downloads: 
+- the report was successfully downloaded and contains all the data.
+- the report was downloaded, but does not contain data (no data from the platform side).
+- the report cannot be downloaded, because the platform has not updated the data for you
 
-Скрипт для скачивания отчетности за выбранный период, по выбранным доменам. 
-Эмулирует скачивание человека, для обхода блокировки аккаунта. Содержит рандомными значениями для высоты скролла в обе стороны, совершение пауз между переходами и пауз до и после нажатий кнопок.
-Проходится поочередно по каждому домену с выбранными для него категориям отчетностей. Место хранения скаченных отчетов задает пользователь. Выбранное место будет использоваться для дальнейшей сборки всех отчетности, в том числе и обработки этих отчетов.
+***
+ 
+<br>
+</details> 
 
-NOTE: Наилучшим решением будет использовать скрипт 1 и 2 в связки в одном запуске, так как переменные из скрипта 1 содержат списки доменов по категориям. 
-Подробнее о доменах по категориям: Так как скачиваемые отчеты, в большинстве случаев, не имеют в названии домен, то необходимо учитывать результат скачивания. Помимо разделения по месяцам (1 месяц - 1 отчет), существуют еще подкатегории, которые формируют 1 категорию (1 подкатегория - 1 отчет). 
-
-Существует три результат скачиваний: 
-1 - отчет был удачно скачен и содержит все данные.
-2 - отчет был скачен, но не содержит данные (нет данных со стороны платформы).
-3 - отчет невозможно скачать, так как платформа не обновила данные за выбранный период.
+<br>
