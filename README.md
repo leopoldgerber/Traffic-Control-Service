@@ -32,12 +32,14 @@ NOTE: The best solution is to use scripts 1 and 2 in tandem in one run, since th
 <details close>
 <summary>Read more about domains by category</summary>
 <br>
+ ---
 Since downloadable reports, in most cases, do not have a domain in the name, it is necessary to consider the result of the download. In addition to the division by month (1 month - 1 report), there are also subcategories that form 1 category (1 subcategory - 1 report).
   
-### There are three results of downloads: 
+There are three results of downloads: 
 1 - the report was successfully downloaded and contains all the data.
 2 - the report was downloaded, but does not contain data (no data from the platform side).
 3 - the report cannot be downloaded, because the platform has not updated the data for you
+---
 </details> 
 
 <br>
