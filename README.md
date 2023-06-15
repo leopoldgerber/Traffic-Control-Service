@@ -6,21 +6,6 @@ The repository contains scripts for working with the platform. A complex task is
 
 ### 1 - Download Data
 
-Main parser
-
-### 2 - Data Preprocessing
-
-### 3 - DB Upload
-
-Responsible for loading data from the collected reports into the database. Includes connection to the database, processing of column names and types (for proper loading into the database).
-
-Required external files: 
-- <code>database_config.json</code> - to connect to the desired database.
-- <code>exception_list.json</code> - for exception columns, because not all columns with string values must be processed. Manual input is possible if there is no file.
-
-Both files can be created using the scripts in the depository [additional files](additional%20files/)
-
-
 A script for downloading reports for a selected period, for selected domains. 
 Emulates downloading a person, to bypass account blocking. Contains random values for the height of the scroll in both directions, making pauses between transitions and pauses before and after pressing buttons.
 Passes through each domain in turn with the reporting categories selected for it. The storage location of the downloaded reports is set by the user. The selected location will be used for further assembly of all reports, including the processing of these reports.
@@ -50,3 +35,16 @@ There are three results of downloads:
 </details> 
 
 <br>
+
+
+### 2 - Data Preprocessing
+
+### 3 - DB Upload
+
+Responsible for loading data from the collected reports into the database. Includes connection to the database, processing of column names and types (for proper loading into the database).
+
+Required external files: 
+- <code>database_config.json</code> - to connect to the desired database.
+- <code>exception_list.json</code> - for exception columns, because not all columns with string values must be processed. Manual input is possible if there is no file.
+
+Both files can be created using the scripts in the depository [additional files](additional%20files/)
