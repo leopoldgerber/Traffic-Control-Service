@@ -10,7 +10,7 @@ A script for downloading reports for a selected period, for selected domains.
 Emulates downloading a person, to bypass account blocking. Contains random values for the height of the scroll in both directions, making pauses between transitions and pauses before and after pressing buttons.
 Passes through each domain in turn with the reporting categories selected for it. The storage location of the downloaded reports is set by the user. The selected location will be used for further assembly of all reports, including the processing of these reports.
 
-NOTE: The best solution is to use scripts 1 and 2 in tandem in one run, since the variables from script 1 contain the lists of domains by category. Modification is possible to display the list of processed domains by category in separate files. 
+<b>NOTE:</b> The best solution is to use scripts 1 and 2 in tandem in one run, since the variables from script 1 contain the lists of domains by category. Modification is possible to display the list of processed domains by category in separate files. 
 
 <br>
 
@@ -33,9 +33,6 @@ There are three results of downloads:
  
 <br>
 </details> 
-
-<br>
-
 
 ### 2 - Data Preprocessing
 
