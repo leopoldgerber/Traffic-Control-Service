@@ -12,4 +12,4 @@ Required external files:
 - <code>database_config.json</code> - to connect to the desired database.
 - <code>exception_list.json</code> - for exception columns, because not all columns with string values must be processed. Manual input is possible if there is no file.
 
-Both files can be created using the scripts in the depository [additional files](#additional-files)
+Both files can be created using the scripts in the depository [additional files](additional%20files/)
