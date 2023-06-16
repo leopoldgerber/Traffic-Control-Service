@@ -6,6 +6,12 @@ The repository contains scripts for working with the platform. A complex task is
 
 ### 1 - Download Data
 The main script for downloading reports from an account on the platform. 
+
+Emulates downloading a person, to bypass account blocking. Contains random values for the height of the scroll in both directions, making pauses between transitions and pauses before and after pressing buttons.
+Passes through each domain in turn with the reporting categories selected for it. The storage location of the downloaded reports is set by the user. The selected location will be used for further assembly of all reports, including the processing of these reports.
+
+<b>NOTE:</b> The best solution is to use scripts 1 and 2 in tandem in one run, since the variables from script 1 contain the lists of domains by category. Modification is possible to display the list of processed domains by category in separate files. 
+
 <details close>
 <summary>See arguments</summary>
 
@@ -21,13 +27,21 @@ The main script for downloading reports from an account on the platform.
 <br>
 </details> 
 
+<summary>See arguments</summary>
+
+<br>
+
+- <code>login</code> of the account 
+- <code>password</code> of the account 
+- <code>fake domain</code> (to overcome the first search page, then a search bar will be used)
+- <code>driver path</code>
+- <code>link</code> to the platform's website (preferably to the authorization page)
+- <code>downloaded files path</code> (required for further processing)
+ 
+<br>
+</details> 
 
 
-A script for downloading reports for a selected period, for selected domains. 
-Emulates downloading a person, to bypass account blocking. Contains random values for the height of the scroll in both directions, making pauses between transitions and pauses before and after pressing buttons.
-Passes through each domain in turn with the reporting categories selected for it. The storage location of the downloaded reports is set by the user. The selected location will be used for further assembly of all reports, including the processing of these reports.
-
-<b>NOTE:</b> The best solution is to use scripts 1 and 2 in tandem in one run, since the variables from script 1 contain the lists of domains by category. Modification is possible to display the list of processed domains by category in separate files. 
 
 <br>
 
