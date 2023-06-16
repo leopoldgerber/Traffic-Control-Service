@@ -5,6 +5,22 @@ The repository contains scripts for working with the platform. A complex task is
 ## Functions performed by scripts:
 
 ### 1 - Download Data
+The main script for downloading reports from an account on the platform. 
+<details close>
+<summary>See arguments</summary>
+
+<br>
+
+- login and password of the account 
+- fake domain (to overcome the first search page, then a search bar will be used)
+- the path to the driver
+- link to the platform's website (preferably to the authorization page)
+- the path for downloaded files (required for further processing)
+ 
+<br>
+</details> 
+
+
 
 A script for downloading reports for a selected period, for selected domains. 
 Emulates downloading a person, to bypass account blocking. Contains random values for the height of the scroll in both directions, making pauses between transitions and pauses before and after pressing buttons.
