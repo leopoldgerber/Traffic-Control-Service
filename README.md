@@ -85,13 +85,13 @@ There are three results of downloads:
 <br>
 </details> 
 
-### - 2 - Data Preprocessing
+## 2 - Data Preprocessing
 
 Processing and combining all reports by category. Uses lists of successfully downloaded reports by domains and collects all reports together.
 The method of entering months is manual, it can be modified. It is also possible to upload a file with domains. Domains will be processed (some extra characters will be deleted, the list will be cleared of duplicates).
 All methods in the class are equal to categories. It is possible to select the desired categories/methods.
 
-### - 3 - DB Upload
+## 3 - DB Upload
 
 Responsible for loading data from the collected reports into the database. Includes connection to the database, processing of column names and types (for proper loading into the database).
 
