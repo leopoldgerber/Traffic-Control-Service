@@ -63,12 +63,10 @@ Category arguments:
 <br>
 </details> 
 
-
-
 <br>
 
 <details close>
-<summary>Read more about domains by category</summary>
+<summary>Read more about domain list and why it is necessary</summary>
 <br>
  
 ***
