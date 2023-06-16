@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
-
-
 class preprocessing:
     def __init__(self, downloads_path, output_path, month_begin, month_end):
         self.downloads_path = downloads_path
@@ -33,49 +30,13 @@ class preprocessing:
         writer.save()
 
     #=================== BACKLINKS ANCHORS ===================
-    def backlinks_anchors(self):
-        temp = []
-
-        for i in backlinks_anchors_list:
-            filename = self.downloads_path+i+'-backlinks_anchors.csv'
-            df = pd.read_csv(filename, sep = ";")
-            #df.rename(columns = {'Unnamed: 0':'Month'}, inplace = True)
-            df['Domain'] = i
-            df.columns = df.columns.str.lower()
-            temp.append(df)
-
-        backlinks_anchors = pd.concat(temp, axis = 0, ignore_index = True)
-        backlinks_anchors = pd.merge(backlinks_anchors, domains,on="domain",how="left")
-
-        #Save as Excel
-        backlinks_anchors_path = self.output_path+'backlinks_anchors.xlsx'
-        writer = pd.ExcelWriter(backlinks_anchors_path,engine='xlsxwriter')
-        data = backlinks_anchors.to_excel(writer, sheet_name = 'Лист 1', index = False)
-        writer.save()
+    
+    <CODE HERE>    
 
     #=================== BACKLINKS REFDOMAINS ===================    
-    def backlinks_refdomains(self):
-        temp = []
-
-        for i in backlinks_refdomains_list:
-            filename = self.downloads_path+i+'-backlinks_refdomains.csv'
-            df = pd.read_csv(filename, sep = ";")
-            #df.rename(columns = {'Unnamed: 0':'Month'}, inplace = True)
-            df['Domain'] = i
-            df.columns = df.columns.str.lower()
-            temp.append(df)
-
-        backlinks_refdomains = pd.concat(temp, axis = 0, ignore_index = True)
-        backlinks_refdomains.fillna(0, inplace = True)
-
-        backlinks_refdomains = pd.merge(backlinks_refdomains, domains,on="domain",how="left")
-
-        #Save as Excel
-        backlinks_refdomains_path = self.output_path+'backlinks_refdomains.xlsx'
-        writer = pd.ExcelWriter(backlinks_refdomains_path,engine='xlsxwriter')
-        data = backlinks_refdomains.to_excel(writer, sheet_name = 'Лист 1', index = False)
-        writer.save()
-        
+    
+    <CODE HERE>    
+    
     #=================== TREND BY DEVICES ===================
     def trend_by_devices(self):
         visits_temp = []
@@ -176,93 +137,12 @@ class preprocessing:
         writer.save()
 
     #=================== TRAFFIC SOURCES ===================
-    def traffic_sources(self):
-        temp = []
-
-        #first_month = (datetime.date.today() - relativedelta(months=6)).strftime('%b')
-        #last_month = datetime.date.today().strftime('%b')
-        first_month = 'Mar'
-        last_month = 'Sep'
-        year = datetime.date.today().strftime('%Y')
-
-        for i in traffic_sources_list:
-            filename = self.downloads_path+'Traffic Sources by Type (domain='+i+', range='+first_month+ \
-                        ' '+year+' – '+last_month+' '+year+').csv'
-            df = pd.read_csv(filename, sep = ",")
-            df.rename(columns = {'Unnamed: 0':'Month'}, inplace = True)
-            df['Domain'] = i
-            df.columns = df.columns.str.lower()
-            temp.append(df)
-
-        traffic_sources = pd.concat(temp, axis = 0, ignore_index = True)
-        traffic_sources.fillna(0, inplace = True)
-
-        traffic_sources = pd.merge(traffic_sources, domains,on="domain",how="left")
-
-        #Month = Mon + Year
-        traffic_sources['year'] = (pd.DatetimeIndex(traffic_sources['month']).year).astype("string")
-
-        traffic_sources['month'] = traffic_sources['month_number'] = pd.DatetimeIndex(traffic_sources['month']).month
-        traffic_sources['month_number'] = traffic_sources['month_number'].astype("string")
-        traffic_sources['month'] = traffic_sources['month_number'].apply(lambda x: (datetime.datetime.strptime(x, "%m")
-                                                                                   ).strftime("%b"))
-
-        #traffic_sources['month'] = traffic_sources['month'].apply(lambda x: calendar.month_abbr[x])
-        #traffic_sources['month_number'] = traffic_sources['month'].apply(lambda x: datetime.datetime.strptime(x, "%b").month)
-
-        traffic_sources['month_year'] = (pd.to_datetime(traffic_sources['month_number'] + ' ' + traffic_sources['year'])
-                                        ).dt.strftime('%d.%m.%Y')
-
-        #traffic_sources['month_year'] = pd.to_datetime(traffic_sources['month_year'])
-        #traffic_sources['month_year'] = traffic_sources['month_year'].dt.strftime('%d.%m.%Y')
-
-        #Save as Excel
-        traffic_sources_path = self.output_path+'traffic_sources.xlsx'
-        writer = pd.ExcelWriter(traffic_sources_path,engine='xlsxwriter')
-        data = traffic_sources.to_excel(writer, sheet_name = 'Лист 1', index = False)
-        writer.save()
+    
+    <CODE HERE>    
 
     #=================== JOURNEY SOURCES ===================
-    def journey_sources(self):
-        temp_count = 1
-        journey_temp = []
-
-        for x in month_list:
-            #domains = pd.read_csv('C:/Users/gerber.l/Downloads/domains.csv', sep = ';')
-
-            last_month = (datetime.date.today() - relativedelta(months=temp_count+1)).strftime('%b')
-            #last_month = 'Aug'
-            year = datetime.date.today().strftime('%Y')
-
-            for i in globals()['journey_list_%s' % x]:
-                filename = self.downloads_path+'All Sources (date='+last_month+' '+year+', target='+i+').csv'
-                df = pd.read_csv(filename, sep = ",")
-                #df.rename(columns = {'Unnamed: 0':'Month'}, inplace = True)
-                df.columns = df.columns.str.lower()
-                df['domain'] = i
-                df['month'] = x
-                df['year'] = year
-                journey_temp.append(df)
-
-            temp_count += 1
-
-        journey_sources = pd.concat(journey_temp, axis = 0, ignore_index = True)
-        journey_sources.fillna(0, inplace = True)
-
-        journey_sources = pd.merge(journey_sources, domains,on="domain",how="left")
-
-        #Month = Mon
-        journey_sources['year'] = journey_sources['year'].astype("string")
-
-        journey_sources['month_number'] = journey_sources['month'].apply(lambda x: datetime.datetime.strptime(x, "%b").month)
-        journey_sources['month_number'] = journey_sources['month_number'].astype("string")
-        journey_sources['month_year'] = (pd.to_datetime(journey_sources['month_number'] + ' ' + journey_sources['year'])).dt.strftime('%d.%m.%Y')
-
-        #Save as Excel
-        journey_sources_path = self.output_path+'journey_sources.xlsx'
-        writer = pd.ExcelWriter(journey_sources_path,engine='xlsxwriter')
-        data = journey_sources.to_excel(writer, sheet_name = 'Лист 1', index = False)
-        writer.save()
+    
+    <CODE HERE>    
 
     #=================== TRAFFIC BY COUNTRIES ===================
     def traffic_by_countries(self): 
@@ -381,30 +261,8 @@ class preprocessing:
         writer.save()
 
     #=================== COMPANY & DOMAINS ===================
-    def domains_company(self):
-        domains = pd.read_csv('C:/Users/Semrush/domains.csv', sep = ';')
-        domains['domain'] = domains['domain'].apply(
-                            lambda x: ((str(x).replace('https://www.', '')
-                                       ).replace('https://', '')).replace('/', ''))
-        domains = domains.drop_duplicates()
-        company = domains['company'].drop_duplicates()
-        domains = domains['domain']
-
-        temp_domains = domains.loc[self.domain_list[0]:(self.domain_list[-1] - 1)]
-        temp_company = company.loc[self.domain_list[0]:(self.domain_list[-1] - 1)]
-
-        #Save as Excel
-        domains_list_path = self.output_path+'domains_list.xlsx'
-        writer = pd.ExcelWriter(domains_list_path,engine='xlsxwriter')
-        data = temp_domains.to_excel(writer, sheet_name = 'Лист 1', index = True)
-        writer.save()
-
-        #Save as Excel
-        company_list_path = self.output_path+'company_list.xlsx'
-        writer = pd.ExcelWriter(company_list_path,engine='xlsxwriter')
-        data = temp_company.to_excel(writer, sheet_name = 'Лист 1', index = True)
-        writer.save()
-
+    
+   <CODE HERE>    
         
 #=================== PREPROCESSING ===================
 url = 'URL_to_WebSite'
@@ -468,8 +326,8 @@ domains['domain'] = domains['domain'].apply(lambda x: (
                     ).replace('https://', '')).replace('/', ''))
 domains = domains.drop_duplicates()
 
-downloads_path = r"C:/Users/Semrush/Downloads/"
-output_path = r"C:/Users/Semrush/Output/"
+downloads_path = r"C:/Downloads/"
+output_path = r"C:/Output/"
 
 #=================== OUTPUT ===================
 
