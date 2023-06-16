@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
-
 #=================== LIBRARIES ===================
 from selenium.webdriver.common.action_chains import ActionChains # Step-by-step
 from selenium.webdriver.support import expected_conditions # Check input authorization
@@ -300,59 +297,12 @@ class downloader_main:
                         scroll(0, 400, 3200, 'long').scroll_down()
                         
 #================== BACKLINKS (backlinks_refdomains.xlsx)
-                    if self.backlinks == True:
-                        backlinks_refdomains = False
-                        try_again = 3
-
-                        while not (try_again == 0):
-                            try:
-                                #Button Export
-                                export = driver.find_element(By.XPATH, '//*[@data-at="backlinks"]//div[3]//div[contains(@class,"___SCol_1q0t9-red-team __span_1q0t9-red-team _span_6_1q0t9-red-team")][2]//*[@class="___SButton_1gip4-red-team _size_m_1gip4-red-team _theme_secondary-muted_1gip4-red-team"]').click()
-                                time.sleep(random.randrange(2, 5, 1))
-
-                                #Select CSV(semilcolon)
-                                csv = driver.find_element(By.XPATH, '//*[@class="___SContainer_6papi-red-team"]//div//*[@value="stdcsv"]').click()
-                                time.sleep(random.randrange(2, 5, 1))
-
-                                print("--- Backlinks Refdomains export: Succeed")
-                                backlinks_refdomains_list.append(domain)
-                                try_again = 0
-                                backlinks_refdomains = True
-
-                            except:
-                                try_again = try_again - 1
-                                print("!!! Backlinks Refdomains export: Failed. Tries left:", try_again)
-                        #print("Backlinks Refdomains export status:",backlinks_refdomains)
-                        
+                    
+                    <CODE HERE>    
                     
 #================== ANCHORS (backlinks_anchors.xlsx)
-                    if self.anchors == True:
-                        backlinks_anchors = False
-                        try_again = 3
-
-                        while not (try_again == 0):
-                            try:
-
-                                #Button Export
-                                export = driver.find_element(By.XPATH, '//*[@data-at="backlinks"]//div[3]//div[contains(@class,"___SCol_1q0t9-red-team __span_1q0t9-red-team _span_6_1q0t9-red-team")][1]//*[@class="___SButton_1gip4-red-team _size_m_1gip4-red-team _theme_secondary-muted_1gip4-red-team"]').click()
-                                time.sleep(random.randrange(2, 5, 1))
-
-                                #Select CSV(semilcolon)
-                                csv = driver.find_element(By.XPATH, '//*[@class="___SContainer_6papi-red-team"]//div//*[@value="stdcsv"]').click()
-                                time.sleep(random.randrange(2, 5, 1))
-
-                                print("--- Backlinks Anchors export: Succeed")
-                                backlinks_anchors_list.append(domain)
-                                try_again = 0
-                                backlinks_anchors = True
-
-                            except:
-                                try_again = try_again - 1
-                                print("!!! Backlinks Anchors export: Failed. Tries left:", try_again)
-                        #print("Backlinks Anchors export status:",backlinks_anchors)
-
-#---------------------- Scroll up
-                        scroll(3300, 500, 0, 'long').scroll_up()
+                                                   
+                    <CODE HERE>    
 
 #================== Navigation
                     export = driver.find_element(By.XPATH, '//*[@id="srf-sidebar"]//div[contains(@class,"srf-report-sidebar-main__group js-sidebar-group")]//div[contains(@id,"accordion-content-seo")]//a[contains(@data-test,"seo_traffic_analytics")]').click()
@@ -390,140 +340,20 @@ class downloader_main:
                         #print("Visits status:",visits)
 
 #================== TREND BY DEVICE !UNIQUE! (Trend By Devices.xlsx)
-                    if self.tbd_unique == True:
-                        unique = False
-                        try_again = 3
-
-                        while not (try_again == 0):
-                            try:
-
-                                #Button UNIQUE
-                                export = driver.find_element(By.XPATH, '//*[@id="chartOverviewVisitsHistory"]//*[@class="___SPills_b6lww_gg_ _size_m_b6lww_gg_"]//button[@value="users"]').click()
-                                #time.sleep(random.randrange(2, 5, 1))
-                                time.sleep(random.randrange(1, 4, 1))
-
-                                #Button Export
-                                export = driver.find_element(By.XPATH, '//*[@id="chartOverviewVisitsHistory"]//*[@class="___SBoxInline_8om4t_gg_ ___SButton_1gip4_gg_ _size_m_1gip4_gg_ _size_m_wus9c_gg_ _theme_secondary-muted_1gip4_gg_"]').click()
-                                #time.sleep(random.randrange(2, 5, 1))
-                                time.sleep(random.randrange(1, 4, 1))
-
-                                #Select CSV
-                                csv = driver.find_element(By.XPATH, '//*[@class="___SContainer_6papi_gg_"]//div//div[contains(@class,"___SDropdownMenuItem_wus9c_gg_ _size_m_wus9c_gg_ ___SFlex_3onux_gg_")][2]').click()
-                                #time.sleep(random.randrange(2, 5, 1))
-                                time.sleep(random.randrange(1, 4, 1))
-
-                                print("--- Unique export: Succeed")
-                                unique_list.append(domain)
-                                try_again = 0
-                                unique = True
-
-                            except:
-                                try_again = try_again - 1
-                                print("!!! Unique export: Failed. Tries left:", try_again)
-                        #print("Unique status:",unique)
+                                                   
+                    <CODE HERE>    
 
 #================== TREND BY DEVICE !DURATION! (Trend By Devices.xlsx)
-                    if self.tbd_duration == True
-                        duration = False
-                        try_again = 3
-
-                        while not (try_again == 0):
-                            try:
-
-                                #Button DURATION
-                                export = driver.find_element(By.XPATH, '//*[@id="chartOverviewVisitsHistory"]//*[@class="___SPills_b6lww_gg_ _size_m_b6lww_gg_"]//button[@value="time_on_site"]').click()
-                                #time.sleep(random.randrange(2, 5, 1))
-                                time.sleep(random.randrange(1, 4, 1))
-
-                                #Button Export
-                                export = driver.find_element(By.XPATH, '//*[@id="chartOverviewVisitsHistory"]//*[@class="___SBoxInline_8om4t_gg_ ___SButton_1gip4_gg_ _size_m_1gip4_gg_ _size_m_wus9c_gg_ _theme_secondary-muted_1gip4_gg_"]').click()
-                                #time.sleep(random.randrange(2, 5, 1))
-                                time.sleep(random.randrange(1, 4, 1))
-
-                                #Select CSV
-                                csv = driver.find_element(By.XPATH, '//*[@class="___SContainer_6papi_gg_"]//div//div[contains(@class,"___SDropdownMenuItem_wus9c_gg_ _size_m_wus9c_gg_ ___SFlex_3onux_gg_")][2]').click()
-                                #time.sleep(random.randrange(2, 5, 1))
-                                time.sleep(random.randrange(1, 4, 1))
-
-                                print("--- Duration export: Succeed")
-                                duration_list.append(domain)
-                                try_again = 0
-                                duration = True
-
-                            except:
-                                try_again = try_again - 1
-                                print("!!! Duration export: Failed. Tries left:", try_again)
-                        #print("Duration status:",duration)
+                                                   
+                    <CODE HERE>    
 
 #================== TREND BY DEVICE !BOUNCE RATE! (Trend By Devices.xlsx)
-                    if self.tbd_bounce_rate == True:
-                        bounce_rate = False
-                        try_again = 3
-
-                        while not (try_again == 0):
-                            try:
-
-                                #Button BOUNCE RATE
-                                export = driver.find_element(By.XPATH, '//*[@id="chartOverviewVisitsHistory"]//*[@class="___SPills_b6lww_gg_ _size_m_b6lww_gg_"]//button[@value="bounce_rate"]').click()
-                                #time.sleep(random.randrange(2, 5, 1))
-                                time.sleep(random.randrange(1, 4, 1))
-
-                                #Button Export
-                                export = driver.find_element(By.XPATH, '//*[@id="chartOverviewVisitsHistory"]//*[@class="___SBoxInline_8om4t_gg_ ___SButton_1gip4_gg_ _size_m_1gip4_gg_ _size_m_wus9c_gg_ _theme_secondary-muted_1gip4_gg_"]').click()
-                                #time.sleep(random.randrange(2, 5, 1))
-                                time.sleep(random.randrange(1, 4, 1))
-
-                                #Select CSV
-                                csv = driver.find_element(By.XPATH, '//*[@class="___SContainer_6papi_gg_"]//div//div[contains(@class,"___SDropdownMenuItem_wus9c_gg_ _size_m_wus9c_gg_ ___SFlex_3onux_gg_")][2]').click()
-                                #time.sleep(random.randrange(2, 5, 1))
-                                time.sleep(random.randrange(1, 4, 1))
-
-                                print("--- Bounce Rate export: Succeed")
-                                bounce_rate_list.append(domain)
-                                try_again = 0
-                                bounce_rate = True
-
-                            except:
-                                try_again = try_again - 1
-                                print("!!! Bounce Rate export: Failed. Tries left:", try_again)
-                        #print("Bounce Rate status:",bounce_rate)
-
-#------------------ Scroll down
-                    scroll(0, 350, 1100, 'short').scroll_down()                    
+                                                   
+                    <CODE HERE>                       
 
 #================== TRAFFIC SOURCES (Traffic Sources by Type.xlsx)
-                    if self.traffic_sources == True:
-                        traffic_sources = False
-                        try_again = 3
-
-                        while not (try_again == 0):
-                            try:
-
-                                #Button Export
-                                export = driver.find_element(By.XPATH, '//div[contains(@class,"sc-1h9cu94-0 hSKyfN")]//button[contains(@class, "___SBoxInline_8om4t_gg_ ___SButton_1gip4_gg_ _size_m_1gip4_gg_ _size_m_wus9c_gg_ _theme_secondary-muted_1gip4_gg_")]').click()
-                                time.sleep(random.randrange(1, 4, 1))
-
-                                #Select CSV
-                                csv = driver.find_element(By.XPATH, '//*[@class="___SContainer_6papi_gg_"]//div//div[contains(@class,"___SDropdownMenuItem_wus9c_gg_ _size_m_wus9c_gg_ ___SFlex_3onux_gg_")][2]').click()
-                                time.sleep(random.randrange(1, 4, 1))
-
-                                print("--- Traffic Sources by Type export: Succeed")
-                                traffic_sources_list.append(domain)
-                                try_again = 0
-                                traffic_sources = True
-
-                            except:
-                                try_again = try_again - 1
-                                print("!!! Traffic Sources by Type export: Failed. Tries left:", try_again)
-                        #print("Traffic Sources by Type export status:",traffic_sources)  
-
-#------------------ Scroll up
-                    scroll(1100, 350, 0, 'short').scroll_up()
-
-#================== Navigation
-                    export = driver.find_element(By.XPATH, '//*[@class="sc-1bc4zew-0 ccJnmu"]//div[contains(@class,"___STabLine_nxhjn_gg_ __underlined_nxhjn_gg_ _size_m_nxhjn_gg_")]//button[contains(@data-test,"reportTab journey")]').click()
-                    time.sleep(random.randrange(5, 8, 1))
-                    print("Change menu link: Traffic Analytics:Journey")
+                                                   
+                    <CODE HERE>    
 
 #------------------ TRAFFIC JOURNEY
 
@@ -595,72 +425,8 @@ class downloader_main:
 #------------------ TRAFFIC GEO DISTRIBUTION
 
 #================== TRAFFIC COUNTRIES  (Traffic by Country.xlsx)
-                    if self.traffic_countries == True:
-                        for x in month_list:
-
-
-                            traffic_by_countries_2 = False
-                            try_again = 3
-
-                            while not (try_again == 0):
-                                try:
-
-                                    #Button 
-                                    export = driver.find_element(By.XPATH, '//a[@data-ui-name="MonthRangePicker.Trigger"]').click()
-                                    time.sleep(random.randrange(1, 4, 1))
-
-                                    #Button 
-                                    export = driver.find_element(By.XPATH, '//button[@aria-label="'+x+' 1, 2022"]').click()
-                                    time.sleep(random.randrange(1, 4, 1))
-
-                                    #Button 
-                                    export = driver.find_element(By.XPATH, '//div[@data-ui-name="Dropdown.Popper"]//button[@data-test="selector-apply"]').click()
-                                    time.sleep(random.randrange(1, 4, 1))
-
-                                    #---------------Scroll down
-                                    scroll(0, 250, 900, 'short').scroll_down()
-
-                                    #---------------TRAFFIC SOURCES (Trend By Countries.xlsx)
-                                    trend_countries = False
-                                    try_again = 3
-
-                                    while not (try_again == 0):
-                                        try:
-
-                                            #Button CSV
-                                            export = driver.find_element(By.XPATH, '//div[contains(@data-test,"geoDistributionList")]//button[contains(@class, "___SButton_1gip4_gg_ _size_m_1gip4_gg_ _theme_secondary-muted_1gip4_gg_")]').click()
-                                            time.sleep(random.randrange(1, 4, 1))
-
-                                            print("--- Trend By Countries export: Succeed")
-                                            #traffic_by_countries_list.append(domain)
-                                            globals()['traffic_by_countries_list_%s' % x].append(domain)
-                                            try_again = 0
-                                            trend_countries = True
-
-                                        except:
-                                            try_again = try_again - 1
-                                            print("!!! Trend By Countries export: Failed. Tries left:", try_again)
-
-                                    #---------------Scroll up
-                                    scroll(900, 350, 0, 'short').scroll_up
-
-                                    print("--- Month "+x+" changed: Succeed")
-                                    traffic_by_countries_list.append(domain)
-                                    try_again = 0
-                                    traffic_by_countries_2 = True
-
-                                except:
-                                    try_again = try_again - 1
-                                    print("!!! Month "+x+" changed: Failed. Tries left:", try_again)
-                    #print("traffic_by_countries_2 status:",traffic_by_countries_2)
-
-    #---------------Scroll up
-                    scroll(900, 350, 0, 'short').scroll_up()
-
-#================== Navigation
-                    export = driver.find_element(By.XPATH, '//*[@id="srf-sidebar"]//div[contains(@class,"srf-report-sidebar-main__group js-sidebar-group")]//div[contains(@id,"accordion-content-seo")]//a[contains(@data-test,"seo_domain_overview")]').click()
-                    time.sleep(random.randrange(5, 8, 1))
-                    print("Change page: Domain Overview")
+                                                   
+                    <CODE HERE>    
 
 #================== STATUS ALERT
                     if self.status_alert == True:
