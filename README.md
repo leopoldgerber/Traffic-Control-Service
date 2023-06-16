@@ -123,3 +123,7 @@ Required external files:
 - <code>exception_list.json</code> - for exception columns, because not all columns with string values must be processed. Manual input is possible if there is no file.
 
 Both files can be created using the scripts in the depository [additional files](additional%20files/)
+
+# License
+
+All Scripts are released under BSD 3-Clause "New" or "Revised" license as found in the [license file](/LICENSE).
