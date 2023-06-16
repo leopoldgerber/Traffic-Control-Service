@@ -12,7 +12,7 @@ Passes through each domain in turn with the reporting categories selected for it
 
 <b>NOTE:</b> The best solution is to use scripts 1 and 2 in tandem in one run, since the variables from script 1 contain the lists of domains by category. Modification is possible to display the list of processed domains by category in separate files. 
 
-Arguments and classes:
+Classes and arguments:
 
 <details close>
 <summary>scroll</summary>
@@ -25,6 +25,22 @@ The arguments can be set by the user, by default, the arguments are passed insid
 <br>
 </details> 
 
+<details close>
+<summary>downloader_prepare</summary>
+Launches the driver (the path to the driver is specified by the user himself in the arguments), navigates to the link specified by the user. Authorization to the user's account takes place (login and password must be specified in the arguments), a fake domain search is launched to crawl the page with the primary search (then the domains will be passed to the search bar).
+<br>
+
+- <code>login</code> of the account 
+- <code>password</code> of the account 
+- <code>fake domain</code> (to overcome the first search page, then a search bar will be used)
+- <code>driver path</code>
+- <code>link</code> to the platform's website (preferably to the authorization page)
+- <code>downloaded files path</code> (required for further processing)
+ 
+<br>
+</details> 
+
+<details close>
 <summary>See arguments</summary>
 
 <br>
