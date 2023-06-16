@@ -11,11 +11,11 @@ The main script for downloading reports from an account on the platform.
 
 <br>
 
-- login and password of the account 
-- fake domain (to overcome the first search page, then a search bar will be used)
-- the path to the driver
-- link to the platform's website (preferably to the authorization page)
-- the path for downloaded files (required for further processing)
+- <code>login</code> and <code>password</code> of the account 
+- <code>fake domain</code> (to overcome the first search page, then a search bar will be used)
+- <code>driver path</code>
+- <code>link</code> to the platform's website (preferably to the authorization page)
+- <code>downloaded files path</code> (required for further processing)
  
 <br>
 </details> 
