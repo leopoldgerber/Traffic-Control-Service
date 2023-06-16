@@ -19,6 +19,7 @@ Classes and arguments:
 The arguments can be set by the user, by default, the arguments are passed inside the main class, since the height of the pages by category differs and processing requires the visibility of buttons when using the script.
 <br>
 
+Methods:
 - <code>.scroll_down</code> Contains 3 (if 'short' was selected) and 7 (if 'long' was selected) repeated actions with fixing the previous random variable. From the beginning of the page to the end or the desired height of visibility of the button.
 - <code>.scroll_up</code> Same as .scroll_down, but for the opposite direction.  
  
@@ -30,6 +31,7 @@ The arguments can be set by the user, by default, the arguments are passed insid
 Launches the driver (the path to the driver is specified by the user himself in the arguments), navigates to the link specified by the user. Authorization to the user's account takes place (login and password must be specified in the arguments), a fake domain search is launched to crawl the page with the primary search (then the domains will be passed to the search bar).
 <br>
 
+Arguments:
 - <code>login</code> of the account 
 - <code>password</code> of the account 
 - <code>fake domain</code> (to overcome the first search page, then a search bar will be used)
@@ -42,16 +44,22 @@ Launches the driver (the path to the driver is specified by the user himself in 
 
 <details close>
 <summary>downloader_main</summary>
-
+The class passes through all categories selected by the user. The arguments are passed a file with domains, the beginning and end of the list of domains (numeric values or string values during modification), the selected categories and enabling notifications about the end of work on the domain (False by default).
 <br>
-
-- <code>login</code> of the account 
-- <code>password</code> of the account 
-- <code>fake domain</code> (to overcome the first search page, then a search bar will be used)
-- <code>driver path</code>
-- <code>link</code> to the platform's website (preferably to the authorization page)
-- <code>downloaded files path</code> (required for further processing)
  
+Category arguments:
+- <code>overview</code> 
+- <code>backlinks</code>
+- <code>anchors</code>
+- <code>tbd_visits</code>
+- <code>tbd_unique</code>
+- <code>tbd_duration</code>
+- <code>tbd_bounce_rate</code>
+- <code>traffic_sources</code>
+- <code>traffic_journey</code>
+- <code>traffic_countries</code>
+- <code>status_alert</code>
+  
 <br>
 </details> 
 
