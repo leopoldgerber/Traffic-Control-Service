@@ -2,7 +2,7 @@
 
 The repository contains scripts for working with the platform. A complex task is the collection of reports for a selected period to analyze competitor traffic, which will help the company to determine the place for expansion, as well as provide an opportunity to analyze the marketing strategy of other companies. 
 
-## Functions performed by scripts:
+# Functions performed by scripts:
 
 ## 1 - Download Data
 The main script for downloading reports from an account on the platform. 
