@@ -48,17 +48,17 @@ The class passes through all categories selected by the user. The arguments are 
 <br>
  
 Category arguments:
-- <code>overview</code> 
-- <code>backlinks</code>
-- <code>anchors</code>
-- <code>tbd_visits</code>
-- <code>tbd_unique</code>
-- <code>tbd_duration</code>
-- <code>tbd_bounce_rate</code>
-- <code>traffic_sources</code>
-- <code>traffic_journey</code>
-- <code>traffic_countries</code>
-- <code>status_alert</code>
+- <code>overview</code> Contains information about organic and inorganic traffic. 
+- <code>backlinks</code> Information from where the user came from.
+- <code>anchors</code> Anchor texts linking to the domain.
+- <code>tbd_visits</code> Trend by devices, subcategory "Visits". Contains information about the number of visits.
+- <code>tbd_unique</code> Trend by devices, subcategory "Unique". Contains information about unique users.
+- <code>tbd_duration</code> Trend by devices, subcategory "Duration". Contains information about the time of visits.
+- <code>tbd_bounce_rate</code> Trend by devices, subcategory "Bounce Rate". Contains information about the bounce rate.
+- <code>traffic_sources</code> Traffic source information.
+- <code>traffic_journey</code> Information about transitions after visiting the page.
+- <code>traffic_countries</code> Traffic information by country.
+- <code>status_alert</code> Notification of the end of work on the domain.
   
 <br>
 </details> 
