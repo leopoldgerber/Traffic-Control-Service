@@ -7,6 +7,8 @@ NOTE: The repository contains an incomplete script and was created to demonstrat
 # Functions performed by scripts:
 
 ## 1 - Download Data
+<code>[Script](1%20-%20Download%20Data.py)</code>
+
 The main script for downloading reports from an account on the platform. 
 
 Emulates downloading a person, to bypass account blocking. Contains random values for the height of the scroll in both directions, making pauses between transitions and pauses before and after pressing buttons.
