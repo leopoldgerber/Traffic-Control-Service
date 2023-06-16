@@ -87,12 +87,34 @@ There are three results of downloads:
 
 ### 2 - Data Preprocessing
 
-A script that processes all downloaded reports by category. Uses lists of successfully downloaded reports by domains and collects all reports together.
+Processing and combining all reports by category. Uses lists of successfully downloaded reports by domains and collects all reports together.
 The method of entering months is manual, it can be modified. It is also possible to upload a file with domains. Domains will be processed (some extra characters will be deleted, the list will be cleared of duplicates).
+All methods in the class are equal to categories. It is possible to select the desired categories/methods.
 
 ### 3 - DB Upload
 
 Responsible for loading data from the collected reports into the database. Includes connection to the database, processing of column names and types (for proper loading into the database).
+
+<details close>
+<summary>Class and Methods</summary>
+<br>
+ 
+Methods:
+- <code>upload_files</code> Loads all output files from the destination folder of the previous script (where processed and merged reports are stored).
+- <code>columns_change_name</code> To correctly assign a name to the fields in the database, you need to correct the name of the columns of the datasets.
+- <code>punctuation_search</code> Search for punctuation for correct processing of queries used to load data into the database.
+- <code>columns_punctuation</code> Search for punctuation inside each column (by values).
+- <code>columns_edit</code> Processing values with punctuation inside the value. Excluding columns in the exclusion list (information will follow).
+- <code>db_connect</code> Connecting to the database.
+ 
+Class:
+- <code>get_column_type</code> Checking columns for data type to correctly determine the data type of fields in the database.
+- <code>create_table</code> Creating a table, the name is determined by the name of the dataframe.
+- <code>alter_columns</code> For automation, columns from the dataframe are added alternately.
+- <code>insert_rows</code> Adding rows to a table.
+  
+<br>
+</details> 
 
 Required external files: 
 - <code>database_config.json</code> - to connect to the desired database.
