@@ -1,6 +1,8 @@
 # Traffic Control Service
 
-The repository contains scripts for working with the platform. A complex task is the collection of reports for a selected period to analyze competitor traffic, which will help the company to determine the place for expansion, as well as provide an opportunity to analyze the marketing strategy of other companies. 
+The repository contains scripts for working with the platform. A complex task is the collection of reports for a selected period to analyze competitor traffic, which will help the company to determine the place for expansion, as well as provide an opportunity to analyze the marketing strategy of other companies.
+
+NOTE: The repository contains an incomplete script and was created to demonstrate skills. Possible copying with the indication of the author (leopoldgerber).
 
 # Functions performed by scripts:
 
