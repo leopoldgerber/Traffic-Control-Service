@@ -97,7 +97,7 @@ The method of entering months is manual, it can be modified. It is also possible
 All methods in the class are equal to categories. It is possible to select the desired categories/methods.
 
 ## 3 - DB Upload
-<code>[Script](3%20-%DB%20Upload.py)</code>
+<code>[Script](3%20-%20DB%20Upload.py)</code>
 
 Responsible for loading data from the collected reports into the database. Includes connection to the database, processing of column names and types (for proper loading into the database).
 
