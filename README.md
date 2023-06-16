@@ -12,17 +12,15 @@ Passes through each domain in turn with the reporting categories selected for it
 
 <b>NOTE:</b> The best solution is to use scripts 1 and 2 in tandem in one run, since the variables from script 1 contain the lists of domains by category. Modification is possible to display the list of processed domains by category in separate files. 
 
-<details close>
-<summary>See arguments</summary>
+Arguments and classes:
 
+<details close>
+<summary>scroll</summary>
+The arguments can be set by the user, by default, the arguments are passed inside the main class, since the height of the pages by category differs and processing requires the visibility of buttons when using the script.
 <br>
 
-- <code>login</code> of the account 
-- <code>password</code> of the account 
-- <code>fake domain</code> (to overcome the first search page, then a search bar will be used)
-- <code>driver path</code>
-- <code>link</code> to the platform's website (preferably to the authorization page)
-- <code>downloaded files path</code> (required for further processing)
+- <code>.scroll_down</code> Contains 3 (if 'short' was selected) and 7 (if 'long' was selected) repeated actions with fixing the previous random variable. From the beginning of the page to the end or the desired height of visibility of the button.
+- <code>.scroll_up</code> Same as .scroll_down, but for the opposite direction.  
  
 <br>
 </details> 
