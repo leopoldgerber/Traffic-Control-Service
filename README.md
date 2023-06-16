@@ -41,7 +41,7 @@ Launches the driver (the path to the driver is specified by the user himself in 
 </details> 
 
 <details close>
-<summary>See arguments</summary>
+<summary>downloader_main</summary>
 
 <br>
 
