@@ -11,7 +11,8 @@ The main script for downloading reports from an account on the platform.
 
 <br>
 
-- <code>login</code> and <code>password</code> of the account 
+- <code>login</code> of the account 
+- <code>password</code> of the account 
 - <code>fake domain</code> (to overcome the first search page, then a search bar will be used)
 - <code>driver path</code>
 - <code>link</code> to the platform's website (preferably to the authorization page)
