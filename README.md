@@ -4,7 +4,7 @@ The repository contains scripts for working with the platform. A complex task is
 
 ## Functions performed by scripts:
 
-### - 1 - Download Data
+## 1 - Download Data
 The main script for downloading reports from an account on the platform. 
 
 Emulates downloading a person, to bypass account blocking. Contains random values for the height of the scroll in both directions, making pauses between transitions and pauses before and after pressing buttons.
