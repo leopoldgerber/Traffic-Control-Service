@@ -128,6 +128,13 @@ Required external files:
 
 Both files can be created using the scripts in the depository [additional files](additional%20files/)
 
+## Power BI
+Demo version of the dashboard in Power BI.
+
+![Power BI 1](https://github.com/leopoldgerber/Traffic-Control-Service/assets/114569329/bda04204-c927-446d-98ee-217e04076e37)
+
+![Power BI 2](https://github.com/leopoldgerber/Traffic-Control-Service/assets/114569329/ba719c1b-416c-4645-976d-e449e9d93355)
+
 # License
 
 All Scripts are released under BSD 3-Clause "New" or "Revised" license as found in the [license file](/LICENSE).
